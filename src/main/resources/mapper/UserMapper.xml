@@ -6,7 +6,7 @@
         <result column="user_name" property="userName"/>
         <result column="password" property="password"/>
     </resultMap>
-    <select id="queryAll" resultMap="userResult">
-        select * from user
+    <select id="login" resultMap="userResult">
+        select * from user where user_name = #{userName} and password = #{password}
     </select>
 </mapper>
