@@ -22,6 +22,9 @@ public class UserController {
         List<User> list = userMapper.login(userName, password);
         Map<String, Integer> map = new HashMap<String,Integer>();
         map.put("status", list.size());
+        if (!map.isEmpty()) {
+            map.put("userId", list.get(0).getUserId());
+        }
         return map;
     }
 }

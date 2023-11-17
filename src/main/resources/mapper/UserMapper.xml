@@ -3,6 +3,7 @@
 
 <mapper namespace="com.example.backend.dao.UserMapper">
     <resultMap id="userResult" type="com.example.backend.entity.User">
+        <result column="user_id" property="userId"/>
         <result column="user_name" property="userName"/>
         <result column="password" property="password"/>
     </resultMap>
